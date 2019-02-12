@@ -126,10 +126,8 @@ module.exports = {
 		{name:"Mempool Summary", url:"/mempool-summary", desc:"Detailed summary of the current mempool for this node.", fontawesome:"fas fa-clipboard-list"},
 		{name:"Unconfirmed Transactions", url:"/unconfirmed-tx", desc:"Browse unconfirmed/pending transactions.", fontawesome:"fas fa-unlock-alt"},
 
-		{name:"RPC Browser", url:"/rpc-browser", desc:"Browse the RPC functionality of this node. See docs and execute commands.", fontawesome:"fas fa-book"},
-		{name:"RPC Terminal", url:"/rpc-terminal", desc:"Directly execute RPCs against this node.", fontawesome:"fas fa-terminal"},
-
 		{name:(coins[currentCoin].name + " Fun"), url:"/fun", desc:"See fun/interesting historical blockchain data.", fontawesome:"fas fa-certificate"}
+
 	],
 
 	donationAddresses:{
@@ -141,11 +139,10 @@ module.exports = {
 	},
 
 	headerDropdownLinks: {
-		title:"Related Sites",
+		title:"Sites",
 		links:[
-			{name: "Bitcoin Explorer", url:"https://btc.chaintools.io", imgUrl:"/img/logo/btc.svg"},
-			{name: "Litecoin Explorer", url:"https://ltc.chaintools.io", imgUrl:"/img/logo/ltc.svg"},
-			{name: "Lightning Explorer", url:"https://lightning.chaintools.io", imgUrl:"/img/logo/lightning.svg"},
+			{name: "Bitcoin 1776", url:"https://www.bitcoin1776.org", imgUrl:"/img/logo/jfk.jpg"},
+			{name: "Reddit 1776", url:"https://www.reddit.com/r/Bitcoin1776", imgUrl:"/img/logo/reddit.svg"},
 		]
 	}
 };

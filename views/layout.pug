@@ -115,53 +115,6 @@ html(lang="en")
 
 			div(style="margin-bottom: 30px;")
 
-			footer(class="footer bg-dark text-light pt-3 pb-1 px-3", style="margin-top: 50px;")
-				div(class="container")
-					div(class="row")
-						div(class="col-md-5")
-							dl
-								dt Source
-								dd
-									a(href="https://github.com/janoside/btc-rpc-explorer") github.com/janoside/btc-rpc-explorer
-
-								if (sourcecodeVersion)
-									dt Running Version
-									dd
-										a(href=("https://github.com/janoside/btc-rpc-explorer/commit/" + sourcecodeVersion)) #{sourcecodeVersion}
-										span(style="color: #ccc;")  (#{sourcecodeDate})
-
-								if (config.demoSite)
-									dt Public Demos
-									dd
-										if (coinConfig.demoSiteUrl)
-											a(href=coinConfig.demoSiteUrl) #{coinConfig.demoSiteUrl}
-										else
-											a(href="https://btc-explorer.chaintools.io") https://btc-explorer.chaintools.io
-										
-										div(class="mt-2")
-											- var demoSiteCoins = ["BTC", "LTC"];
-											each demoSiteCoin in demoSiteCoins
-												a(href=coinConfigs[demoSiteCoin].demoSiteUrl, class="mr-2", title=coinConfigs[demoSiteCoin].siteTitle)
-													img(src=("/img/logo/" + demoSiteCoin.toLowerCase() + ".svg"), alt=demoSiteCoin.toLowerCase())
-
-											a(href="https://lightning.chaintools.io", class="mr-2", title="Lightning Explorer")
-												img(src=("/img/logo/lightning.svg"), style="width: 32px; height: 32px;", alt="lightning")
-
-						div(class="col-md-7 text-md-right")
-							dl
-								dt Support Development of #{coinConfig.siteTitle}
-								dd
-									div(class="text-md-right text-center")
-										each coin, index in config.donationAddresses.coins
-											div(style="display: inline-block; max-width: 150px;", class="text-center mb-3 word-wrap monospace", class=(index > 0 ? "ml-md-3" : false))
-												img(src=donationAddressQrCodeUrls[coin], alt=config.donationAddresses[coin].address, style="border: solid 1px #ccc;")
-												br
-												if (coinConfig.ticker == coin)
-													span #{coin}: 
-													a(href=("/address/" + config.donationAddresses[coin].address)) #{config.donationAddresses[coin].address}
-												else
-													span #{coin}: 
-													a(href=(config.donationAddresses.sites[coin] + "/address/" + config.donationAddresses[coin].address)) #{config.donationAddresses[coin].address}
 		
 		script(src="/js/jquery.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=")
 		script(src="/js/popper.min.js", integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut")
